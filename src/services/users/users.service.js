@@ -1,7 +1,7 @@
 const { Service } = require('feathers-sequelize');
 
-const User = require('../models/user.model');
-const userHooks = require('../hooks/users.hook');
+const User = require('../../models/user.model');
+const userHooks = require('./users.hook');
 
 class UserService extends Service {
   constructor(options, app) {
@@ -9,12 +9,13 @@ class UserService extends Service {
     this.app = app;
   }
 
-  async remove() {
-    return null;
-  }
+  // async remove(id) {
+  //   console.log(id);
+  //   return null;
+  // }
 }
 
-module.exports = function users(app) {
+module.exports = async function users(app) {
   const options = {
     Model: User(app),
   };

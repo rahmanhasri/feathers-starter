@@ -4,11 +4,17 @@
   "description": "feathers skeleton",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dev": "DEBUG=express:* nodemon src/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rahmanhasri/feathers-starter.git"
+  },
+  "directories": {
+    "lib": "src",
+    "test": "test/",
+    "config": "config/"
   },
   "keywords": [
     "feathers",
@@ -22,20 +28,22 @@
   "homepage": "https://github.com/rahmanhasri/feathers-starter#readme",
   "dependencies": {
     "@feathers-plus/validate-joi": "^3.4.0",
+    "@feathersjs/authentication": "^4.5.10",
+    "@feathersjs/authentication-local": "^4.5.10",
+    "@feathersjs/authentication-oauth": "^4.5.10",
     "@feathersjs/configuration": "^4.5.10",
     "@feathersjs/errors": "^4.5.10",
     "@feathersjs/express": "^4.5.10",
     "@feathersjs/feathers": "^4.5.10",
     "@feathersjs/socketio": "^4.5.10",
-    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "feathers-sequelize": "^6.2.0",
     "joi": "^17.3.0",
     "mysql2": "^2.2.5",
-    "sequelize": "^6.3.5"
+    "sequelize": "^6.3.5",
+    "axios": "^0.21.0"
   },
   "devDependencies": {
-    "axios": "^0.21.0",
     "eslint": "^7.13.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
